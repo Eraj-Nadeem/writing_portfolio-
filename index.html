@@ -3,815 +3,896 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syeda Eraj Nadeem | Content Writer and Email Copywriter</title>
+<title>Syeda Eraj Nadeem | Content Writer & Email Copywriter</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #0f0e0d;
-    --paper: #faf8f4;
-    --cream: #f3ede3;
-    --accent: #c8533a;
-    --accent-soft: #f0e0da;
-    --gold: #b8924a;
-    --muted: #7a7068;
-    --border: #e2dbd0;
-    --white: #ffffff;
-    --serif: 'Playfair Display', Georgia, serif;
-    --sans: 'DM Sans', sans-serif;
-    --mono: 'DM Mono', monospace;
-    --max: 1200px;
-    --pad: clamp(24px, 5vw, 80px);
+    --cream: #f5f0e8;
+    --dark: #1a1a18;
+    --red: #c0392b;
+    --red-light: #e05a4a;
+    --gold: #b8860b;
+    --mid: #3d3d3a;
+    --border: #d8d0c4;
+    --tag-bg: #ffffff;
   }
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+
   body {
-    font-family: var(--sans);
-    background: var(--paper);
-    color: var(--ink);
-    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
   }
- 
+
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px var(--pad);
-    background: rgba(250,248,244,0.94);
-    backdrop-filter: blur(14px);
+    background: rgba(245,240,232,0.95);
+    backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
   }
   .nav-logo {
-    font-family: var(--serif); font-size: 1.05rem; font-weight: 700;
-    letter-spacing: -0.02em; color: var(--ink); text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: var(--dark); text-decoration: none;
   }
-  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
-    font-size: 0.82rem; font-weight: 500; color: var(--muted);
-    text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase;
+    text-decoration: none; color: var(--mid);
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em;
+    text-transform: uppercase;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--accent); }
+  .nav-links a:hover { color: var(--red); }
   .nav-cta {
-    background: var(--accent) !important; color: var(--white) !important;
-    padding: 8px 18px; border-radius: 5px; font-weight: 600 !important;
+    background: var(--red); color: #fff !important;
+    padding: 0.45rem 1.2rem; border-radius: 4px;
+    font-size: 0.82rem !important; letter-spacing: 0.06em !important;
+    transition: background 0.2s !important;
   }
-  .nav-cta:hover { background: #a8432a !important; }
- 
-  /* LAYOUT */
-  section { padding: 96px var(--pad); }
-  .inner { max-width: var(--max); margin: 0 auto; }
+  .nav-cta:hover { background: var(--red-light) !important; }
+
+  /* SECTIONS */
+  section { padding: 100px 5%; }
   .section-label {
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--accent);
-    margin-bottom: 10px;
-    display: flex; align-items: center; gap: 10px;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--red);
+    display: flex; align-items: center; gap: 0.8rem;
+    margin-bottom: 1.5rem;
   }
-  .section-label::after { content: ''; width: 36px; height: 1px; background: var(--accent); }
-  .section-title {
-    font-family: var(--serif);
-    font-size: clamp(1.9rem, 3.2vw, 2.85rem);
-    font-weight: 900; line-height: 1.08; letter-spacing: -0.03em;
-    margin-bottom: 14px;
+  .section-label::after {
+    content: '';
+    display: block; width: 48px; height: 1.5px;
+    background: var(--red);
   }
-  .section-title em { font-style: italic; color: var(--accent); }
-  .section-sub {
-    font-size: 1rem; color: var(--muted); max-width: 520px;
-    line-height: 1.75; font-weight: 300;
+  .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700; line-height: 1.15;
+    color: var(--dark);
+    margin-bottom: 1rem;
   }
-  .section-hd { margin-bottom: 52px; }
-  hr.divider { border: none; border-top: 1px solid var(--border); }
- 
-  /* BUTTONS */
-  .btn-p {
-    background: var(--accent); color: var(--white);
-    padding: 13px 26px; border-radius: 6px; font-weight: 600;
-    font-size: 0.92rem; text-decoration: none;
-    display: inline-flex; align-items: center; gap: 8px;
-    transition: all 0.2s;
+  .section-heading em {
+    font-style: italic; color: var(--red);
   }
-  .btn-p:hover { background: #a8432a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,83,58,0.25); }
-  .btn-s {
-    background: transparent; color: var(--ink);
-    padding: 13px 26px; border-radius: 6px; font-weight: 500;
-    font-size: 0.92rem; text-decoration: none;
-    border: 1.5px solid var(--border);
-    display: inline-flex; align-items: center; gap: 8px;
-    transition: all 0.2s;
-  }
-  .btn-s:hover { border-color: var(--ink); transform: translateY(-2px); }
- 
+
   /* HERO */
-  .hero-wrap { padding: 0; }
-  .hero {
+  #hero {
     min-height: 100vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    align-items: center; gap: 56px;
-    max-width: var(--max); margin: 0 auto;
-    padding: 120px var(--pad) 80px;
-  }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--accent-soft); color: var(--accent);
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em;
-    text-transform: uppercase; padding: 6px 14px; border-radius: 100px;
-    margin-bottom: 26px;
-  }
-  .hero-badge::before {
-    content: ''; width: 6px; height: 6px;
-    background: var(--accent); border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.3)}
-  }
-  .hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.6rem, 4.8vw, 4rem);
-    font-weight: 900; line-height: 1.05; letter-spacing: -0.03em;
-    margin-bottom: 22px;
-  }
-  .hero h1 em { font-style: italic; color: var(--accent); }
-  .hero-sub {
-    font-size: 1.05rem; color: var(--muted); line-height: 1.75;
-    margin-bottom: 34px; max-width: 460px; font-weight: 300;
-  }
-  .hero-sub strong { color: var(--ink); font-weight: 600; }
-  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-  .hero-right { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .stat-card {
-    background: var(--white); border: 1px solid var(--border);
-    border-radius: 12px; padding: 26px 22px;
+    display: flex; align-items: center;
+    padding-top: 64px;
+    background: var(--dark);
     position: relative; overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
   }
-  .stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
-  .stat-card.feat {
-    background: var(--ink); color: var(--white);
-    grid-column: span 2;
-    display: flex; align-items: center; justify-content: space-between;
+  #hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(192,57,43,0.12) 0%, transparent 60%);
   }
-  .stat-card.acc { background: var(--accent); color: var(--white); }
-  .stat-num { font-family: var(--serif); font-size: 2.3rem; font-weight: 900; line-height: 1; margin-bottom: 5px; }
-  .stat-card.feat .stat-num { font-size: 2.8rem; }
-  .stat-lbl { font-size: 0.75rem; font-weight: 600; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase; }
-  .stat-card.feat .stat-lbl { opacity: 0.8; font-size: 0.85rem; }
-  .stat-sub { font-size: 0.75rem; opacity: 0.55; margin-top: 4px; }
-  .stat-icon { font-size: 2.2rem; opacity: 0.12; position: absolute; right: 14px; top: 14px; }
-  .years-badge { font-family: var(--serif); font-size: 0.95rem; font-style: italic; opacity: 0.65; text-align: right; }
- 
-  /* TICKER */
-  .ticker-wrap {
-    overflow: hidden;
-    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-    padding: 13px 0; background: var(--white);
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: 1200px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
   }
-  .ticker { display: flex; width: max-content; animation: tick 36s linear infinite; }
-  .ticker-item {
-    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.09em;
-    text-transform: uppercase; color: var(--muted);
-    padding: 0 28px; white-space: nowrap;
-    display: flex; align-items: center; gap: 12px;
+  .hero-left {}
+  .hero-tag {
+    display: inline-block;
+    background: rgba(192,57,43,0.15);
+    border: 1px solid rgba(192,57,43,0.3);
+    color: var(--red-light);
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.3rem 0.9rem; border-radius: 100px;
+    margin-bottom: 1.5rem;
   }
-  .ticker-item::after { content: '·'; color: var(--accent); font-size: 1.1rem; }
-  @keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
- 
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 900; line-height: 1.05;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  .hero-name em { color: var(--red-light); font-style: italic; }
+  .hero-sub {
+    font-size: 1.05rem; color: rgba(255,255,255,0.6);
+    max-width: 480px; line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+  .hero-pills {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .pill {
+    font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em;
+    padding: 0.3rem 0.9rem; border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.05);
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--red); color: #fff;
+    padding: 0.75rem 2rem; border-radius: 5px;
+    text-decoration: none; font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.04em; transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--red-light); }
+  .btn-ghost {
+    border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.8);
+    padding: 0.75rem 2rem; border-radius: 5px;
+    text-decoration: none; font-size: 0.9rem; font-weight: 500;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+
+  /* HERO STATS GRID */
+  .hero-right {}
+  .stats-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; overflow: hidden;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.04);
+    padding: 2rem 1.8rem;
+    transition: background 0.2s;
+  }
+  .stat-card:hover { background: rgba(255,255,255,0.07); }
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem; font-weight: 700;
+    color: var(--red-light); line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat-label {
+    font-size: 0.75rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.45);
+    font-weight: 500;
+  }
+
   /* SERVICES */
   #services { background: var(--cream); }
   .services-grid {
-    display: grid; grid-template-columns: repeat(3,1fr);
-    gap: 2px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+    margin-top: 3rem;
   }
-  .svc-card { background: var(--white); padding: 38px 32px; transition: background 0.3s; }
-  .svc-card:hover { background: var(--paper); }
-  .svc-icon {
-    width: 46px; height: 46px; background: var(--accent-soft);
-    border-radius: 10px; display: flex; align-items: center;
-    justify-content: center; font-size: 1.3rem; margin-bottom: 18px;
+  .service-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
   }
-  .svc-title { font-family: var(--serif); font-size: 1.22rem; font-weight: 700; margin-bottom: 11px; line-height: 1.2; }
-  .svc-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 18px; font-weight: 300; }
-  .tag-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag {
-    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em;
-    background: var(--cream); color: var(--ink);
-    padding: 4px 10px; border-radius: 100px; border: 1px solid var(--border);
+  .service-icon {
+    font-size: 1.8rem; margin-bottom: 1rem;
   }
- 
+  .service-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--dark);
+  }
+  .service-desc {
+    font-size: 0.88rem; color: var(--mid);
+    line-height: 1.65; margin-bottom: 1.5rem;
+  }
+  .service-tags {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+  }
+  .service-tag {
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.3rem 0.75rem; border-radius: 4px;
+    background: var(--cream);
+    color: var(--mid);
+    border: 1px solid var(--border);
+  }
+
   /* RESULTS */
-  #results { background: var(--paper); }
-  .results-intro {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 72px; align-items: start; margin-bottom: 52px;
+  #results { background: #fff; }
+  .results-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 3rem;
   }
-  .results-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-  .res-card {
-    background: var(--white); border: 1px solid var(--border);
-    border-radius: 14px; padding: 30px 26px;
-    position: relative; overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+  .result-card {
+    border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden;
   }
-  .res-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0;
-    height: 3px; background: var(--accent);
+  .result-header {
+    padding: 0.5rem 1.2rem;
+    background: var(--cream);
+    font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--red);
+    font-weight: 600; border-bottom: 1px solid var(--border);
   }
-  .res-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
-  .res-niche {
-    font-size: 0.67rem; font-weight: 700; letter-spacing: 0.09em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 7px;
+  .result-body { padding: 1.5rem; }
+  .result-client {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem; font-weight: 700;
+    margin-bottom: 1rem; color: var(--dark);
   }
-  .res-client { font-family: var(--serif); font-size: 1.18rem; font-weight: 700; margin-bottom: 18px; }
-  .res-metrics { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
-  .metric { display: flex; align-items: baseline; gap: 8px; }
-  .met-n { font-family: var(--serif); font-size: 1.5rem; font-weight: 900; color: var(--accent); line-height: 1; }
-  .met-l { font-size: 0.8rem; color: var(--muted); }
-  .res-desc {
-    font-size: 0.8rem; color: var(--muted); line-height: 1.6;
-    padding-top: 14px; border-top: 1px solid var(--border); font-weight: 300;
+  .result-metrics {
+    display: flex; gap: 0.75rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
- 
+  .metric {
+    flex: 1; min-width: 80px;
+    background: var(--cream);
+    border-radius: 6px; padding: 0.65rem 0.75rem;
+    text-align: center;
+  }
+  .metric-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--red); display: block; line-height: 1;
+  }
+  .metric-label {
+    font-size: 0.65rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--mid);
+    display: block; margin-top: 0.25rem;
+  }
+  .result-desc {
+    font-size: 0.82rem; color: var(--mid);
+    line-height: 1.6;
+  }
+
+  /* EXPERTISE */
+  #expertise { background: var(--dark); }
+  #expertise .section-label { color: var(--red-light); }
+  #expertise .section-label::after { background: var(--red-light); }
+  #expertise .section-heading { color: #fff; }
+  #expertise .section-heading em { color: var(--red-light); }
+  .expertise-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .expertise-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 2rem;
+    transition: background 0.2s;
+  }
+  .expertise-card:hover { background: rgba(255,255,255,0.07); }
+  .exp-number {
+    font-size: 0.72rem; letter-spacing: 0.1em;
+    color: var(--red-light); font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  .exp-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: #fff; margin-bottom: 0.6rem;
+  }
+  .exp-desc {
+    font-size: 0.85rem; color: rgba(255,255,255,0.55);
+    line-height: 1.65; margin-bottom: 1rem;
+  }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .exp-tag {
+    font-size: 0.7rem; font-weight: 500;
+    padding: 0.25rem 0.65rem; border-radius: 4px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.6);
+  }
+
   /* EMAIL */
-  #email { background: var(--ink); color: var(--white); }
-  #email .section-label { color: var(--gold); }
-  #email .section-label::after { background: var(--gold); }
-  #email .section-title { color: var(--white); }
-  #email .section-sub { color: rgba(255,255,255,0.55); }
-  .email-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-  .email-flist { list-style: none; display: flex; flex-direction: column; gap: 18px; margin-top: 32px; }
-  .email-feat { display: flex; gap: 14px; align-items: flex-start; }
-  .email-feat-icon {
-    width: 34px; height: 34px; flex-shrink: 0;
-    background: rgba(255,255,255,0.08); border-radius: 8px;
-    display: flex; align-items: center; justify-content: center; font-size: 0.95rem;
+  #email { background: var(--cream); }
+  .email-inner {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center;
   }
-  .email-feat h4 { font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; color: var(--white); }
-  .email-feat p { font-size: 0.82rem; color: rgba(255,255,255,0.45); font-weight: 300; line-height: 1.5; }
-  .email-mock {
-    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 16px; overflow: hidden;
+  .email-stats {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden;
+    margin-top: 2rem;
   }
-  .mock-bar {
-    background: rgba(255,255,255,0.08); padding: 11px 18px;
-    display: flex; align-items: center; gap: 7px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+  .email-stat {
+    background: #fff; padding: 1.5rem 1.2rem; text-align: center;
   }
-  .dot { width: 9px; height: 9px; border-radius: 50%; }
-  .dr{background:#ff5f57} .dy{background:#ffbd2e} .dg{background:#28ca41}
-  .mock-body { padding: 26px; }
-  .ml { background: rgba(255,255,255,0.12); border-radius: 4px; height: 10px; margin-bottom: 9px; }
-  .ms-line { background: rgba(200,83,58,0.35); height: 14px; border-radius: 4px; margin-bottom: 18px; width: 72%; }
-  .mock-btn {
-    margin-top: 18px; background: var(--accent); border-radius: 6px;
-    padding: 10px; text-align: center; font-size: 0.78rem; font-weight: 600; color: white;
+  .email-stat-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; color: var(--red); font-weight: 700;
   }
-  .mock-stats { display: flex; gap: 14px; margin-top: 20px; }
-  .ms-box { flex:1; background: rgba(255,255,255,0.07); border-radius: 9px; padding: 14px; text-align: center; }
-  .ms-box .n { font-family: var(--serif); font-size: 1.4rem; font-weight: 900; color: var(--gold); }
-  .ms-box .l { font-size: 0.66rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.06em; }
- 
-  /* TOOLS */
-  #tools { background: var(--cream); }
-  .tools-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 72px; align-items: start; }
-  .tool-cats { display: flex; flex-direction: column; gap: 28px; }
-  .tool-cat h4 {
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 11px;
+  .email-stat-lbl {
+    font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--mid); margin-top: 0.3rem;
   }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chip {
-    font-family: var(--mono); font-size: 0.76rem; padding: 6px 12px;
-    border-radius: 6px; background: var(--white); border: 1px solid var(--border);
-    color: var(--ink); transition: all 0.2s; white-space: nowrap;
+  .email-mockup {
+    background: var(--dark);
+    border-radius: 12px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
   }
-  .chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
- 
+  .mockup-bar {
+    background: #2a2a28;
+    padding: 0.75rem 1.2rem;
+    display: flex; align-items: center; gap: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f57; }
+  .dot-y { background: #febc2e; }
+  .dot-g { background: #28c840; }
+  .mockup-title {
+    font-size: 0.78rem; color: rgba(255,255,255,0.5);
+    margin-left: 0.5rem;
+  }
+  .mockup-body { padding: 1.5rem; }
+  .mockup-subject {
+    background: rgba(192,57,43,0.4);
+    border-radius: 4px; height: 14px; width: 70%;
+    margin-bottom: 1rem;
+  }
+  .mockup-line {
+    background: rgba(255,255,255,0.12);
+    border-radius: 4px; height: 10px; margin-bottom: 0.6rem;
+  }
+  .mockup-line.short { width: 55%; }
+  .mockup-line.shorter { width: 75%; }
+  .mockup-btn {
+    margin-top: 1.2rem;
+    background: var(--red);
+    border-radius: 5px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; color: #fff; font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .email-text { font-size: 0.9rem; color: var(--mid); line-height: 1.75; margin-bottom: 1rem; }
+  .email-text strong { color: var(--dark); }
+  .tools-line {
+    font-size: 0.82rem; color: var(--mid); margin-top: 1.5rem;
+  }
+  .tools-line strong { color: var(--dark); }
+
+  /* TECH STACK */
+  #techstack { background: #fff; }
+  .stack-layout {
+    display: grid; grid-template-columns: 1fr 2fr;
+    gap: 4rem; align-items: start;
+    margin-top: 3rem;
+  }
+  .stack-intro-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 700; line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+  .stack-intro-heading em { color: var(--red); font-style: italic; }
+  .stack-intro-sub {
+    font-size: 0.88rem; color: var(--mid); line-height: 1.65;
+  }
+  .stack-categories {}
+  .stack-cat { margin-bottom: 2rem; }
+  .stack-cat-label {
+    font-size: 0.72rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--red);
+    font-weight: 700; margin-bottom: 0.75rem;
+  }
+  .stack-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .stack-tag {
+    font-size: 0.83rem; font-weight: 500;
+    padding: 0.4rem 1rem; border-radius: 6px;
+    border: 1.5px solid var(--border);
+    background: var(--tag-bg);
+    color: var(--dark);
+    transition: border-color 0.2s, background 0.2s;
+    white-space: nowrap;
+  }
+  .stack-tag:hover { border-color: var(--red); background: #fff8f7; }
+
   /* EXPERIENCE */
-  #experience { background: var(--paper); }
-  .exp-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 72px; }
-  .timeline { display: flex; flex-direction: column; position: relative; }
-  .timeline::before {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-    width: 1px; background: var(--border);
+  #experience { background: var(--cream); }
+  .exp-timeline { margin-top: 3rem; }
+  .exp-item {
+    display: grid; grid-template-columns: 200px 1fr;
+    gap: 3rem; margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid var(--border);
   }
-  .exp-item { padding: 0 0 46px 30px; position: relative; }
-  .exp-item:last-child { padding-bottom: 0; }
-  .exp-dot {
-    position: absolute; left: -5px; top: 6px;
-    width: 10px; height: 10px; border-radius: 50%;
-    background: var(--accent); border: 2px solid var(--paper);
+  .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .exp-period {
+    font-size: 0.78rem; color: var(--red);
+    font-weight: 600; letter-spacing: 0.04em;
+    padding-top: 0.25rem;
   }
-  .exp-date { font-family: var(--mono); font-size: 0.73rem; color: var(--muted); margin-bottom: 7px; }
-  .exp-role { font-family: var(--serif); font-size: 1.18rem; font-weight: 700; margin-bottom: 3px; }
-  .exp-co { font-size: 0.85rem; color: var(--accent); font-weight: 600; margin-bottom: 14px; }
-  .exp-ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-  .exp-ul li {
-    font-size: 0.88rem; color: var(--muted); line-height: 1.6;
-    font-weight: 300; display: flex; gap: 9px; align-items: flex-start;
+  .exp-company {
+    font-size: 0.8rem; color: var(--mid);
+    margin-top: 0.3rem;
   }
-  .exp-ul li::before { content: '→'; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
-  .hl { color: var(--ink); font-weight: 600; }
- 
+  .exp-right {}
+  .exp-role {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--dark); margin-bottom: 1rem;
+  }
+  .exp-bullets { list-style: none; }
+  .exp-bullets li {
+    font-size: 0.88rem; color: var(--mid);
+    line-height: 1.65; padding-left: 1rem;
+    position: relative; margin-bottom: 0.6rem;
+  }
+  .exp-bullets li::before {
+    content: ''; position: absolute; left: 0; top: 0.65em;
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--red);
+  }
+
   /* CTA */
-  #contact { background: var(--cream); }
-  .cta-box {
-    background: var(--white); border: 1px solid var(--border);
-    border-radius: 20px; padding: 64px 72px;
-    display: grid; grid-template-columns: 1fr auto;
-    gap: 56px; align-items: center;
+  #cta {
+    background: var(--dark); text-align: center;
   }
-  .cta-title {
-    font-family: var(--serif);
-    font-size: clamp(1.8rem, 2.8vw, 2.6rem);
-    font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 14px;
+  #cta .section-heading { color: #fff; }
+  #cta .section-heading em { color: var(--red-light); }
+  #cta .section-label { justify-content: center; }
+  #cta .section-label::after { display: none; }
+  .cta-desc {
+    font-size: 1rem; color: rgba(255,255,255,0.55);
+    max-width: 500px; margin: 0 auto 2.5rem;
+    line-height: 1.7;
   }
-  .cta-title em { font-style: italic; color: var(--accent); }
-  .cta-sub { font-size: 0.97rem; color: var(--muted); line-height: 1.75; font-weight: 300; max-width: 420px; }
-  .cta-loc { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--muted); margin-top: 18px; }
-  .cta-btns { display: flex; flex-direction: column; gap: 11px; min-width: 210px; }
- 
+  .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .cta-contact { font-size: 0.82rem; color: rgba(255,255,255,0.35); margin-top: 1.5rem; }
+  .cta-contact a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .cta-contact a:hover { color: #fff; }
+
   /* FOOTER */
-  footer { padding: 24px var(--pad); border-top: 1px solid var(--border); }
-  .foot-inner {
-    max-width: var(--max); margin: 0 auto;
+  footer {
+    background: #111110;
+    padding: 2rem 5%;
     display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.06);
   }
-  .foot-name { font-family: var(--serif); font-weight: 700; font-size: 0.95rem; }
-  .foot-links { display: flex; gap: 22px; }
-  .foot-links a { font-size: 0.8rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-  .foot-links a:hover { color: var(--accent); }
-  .foot-c { font-size: 0.76rem; color: var(--muted); }
- 
-  /* ANIMATIONS */
-  .fu { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .fu.vis { opacity: 1; transform: translateY(0); }
- 
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; color: rgba(255,255,255,0.5);
+  }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a {
+    font-size: 0.78rem; color: rgba(255,255,255,0.35);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+  .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.2); }
+
   /* RESPONSIVE */
-  @media(max-width:960px){
-    .hero { grid-template-columns:1fr; padding-top:100px; }
-    .hero-right { display:none; }
-    .services-grid,.results-grid { grid-template-columns:1fr; }
-    .results-intro,.email-layout,.tools-layout,.exp-layout { grid-template-columns:1fr; gap:36px; }
-    .cta-box { grid-template-columns:1fr; padding:40px 32px; }
-    .nav-links { display:none; }
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .expertise-grid { grid-template-columns: 1fr; }
+    .email-inner { grid-template-columns: 1fr; }
+    .stack-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    nav { padding: 0 4%; }
+    .nav-links { display: none; }
   }
 </style>
 </head>
 <body>
- 
+
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Syeda Eraj Nadeem</a>
+  <a class="nav-logo" href="#">Syeda Eraj Nadeem</a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#results">Results</a></li>
-    <li><a href="#tools">Tools</a></li>
+    <li><a href="#techstack">Tech Stack</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    <li><a href="#cta" class="nav-cta">Work With Me</a></li>
   </ul>
 </nav>
- 
+
 <!-- HERO -->
-<section class="hero-wrap" style="padding:0;">
-  <div class="hero">
-    <div>
-      <div class="hero-badge">Available for Remote Work</div>
-      <h1>Words that <em>rank,</em><br>convert, and grow.</h1>
-      <p class="hero-sub">
-        <strong>7 years</strong> crafting SEO content, email sequences, and brand strategy across 15+ client accounts. From topical authority to Klaviyo drip campaigns, I write copy that moves people and algorithms.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-p">📩 Let's Work Together</a>
-        <a href="#results" class="btn-s">View Results →</a>
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <span class="hero-tag">Content Writer · Email Copywriter · Content Strategist</span>
+      <h1 class="hero-name">Syeda <em>Eraj</em> Nadeem</h1>
+      <p class="hero-sub">7 years crafting words that rank, convert, and grow audiences. From long-form SEO articles to Klaviyo email sequences to Reels scripts, I build content that delivers results across every channel.</p>
+      <div class="hero-pills">
+        <span class="pill">SEO Content Writing</span>
+        <span class="pill">Email Marketing Copy</span>
+        <span class="pill">Content Strategy</span>
+        <span class="pill">Topical Authority</span>
+        <span class="pill">EEAT</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#cta" class="btn-primary">Work With Me</a>
+        <a href="#results" class="btn-ghost">View Results</a>
       </div>
     </div>
     <div class="hero-right">
-      <div class="stat-card feat">
-        <div>
-          <div class="stat-num">+434%</div>
-          <div class="stat-lbl">Social Reach Growth</div>
-          <div class="stat-sub" style="color:rgba(255,255,255,0.45);margin-top:7px;">EMME Lash Bar · 6 weeks</div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">+434%</div>
+          <div class="stat-label">Social Reach</div>
         </div>
-        <div class="years-badge">7 years<br>writing</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">📈</div>
-        <div class="stat-num">+60%</div>
-        <div class="stat-lbl">Organic Traffic Lift</div>
-        <div class="stat-sub" style="margin-top:5px;">SEO content strategy</div>
-      </div>
-      <div class="stat-card acc">
-        <div class="stat-num" style="color:white;">15+</div>
-        <div class="stat-lbl" style="color:rgba(255,255,255,0.75);">Client Accounts</div>
-        <div class="stat-sub" style="color:rgba(255,255,255,0.5);margin-top:5px;">Managed simultaneously</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">✉️</div>
-        <div class="stat-num">+30%</div>
-        <div class="stat-lbl">Email Engagement Lift</div>
-        <div class="stat-sub" style="margin-top:5px;">Across 8+ brands</div>
+        <div class="stat-card">
+          <div class="stat-number">60%</div>
+          <div class="stat-label">Organic Traffic</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Client Accounts</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">35+</div>
+          <div class="stat-label">Global Clients Worked With</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
- 
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker">
-    <span class="ticker-item">SEO Content Writing</span>
-    <span class="ticker-item">Email Copywriting</span>
-    <span class="ticker-item">Topical Authority</span>
-    <span class="ticker-item">EEAT Optimization</span>
-    <span class="ticker-item">Klaviyo Campaigns</span>
-    <span class="ticker-item">Silo Architecture</span>
-    <span class="ticker-item">Full Funnel Content Strategy</span>
-    <span class="ticker-item">Drip Sequences</span>
-    <span class="ticker-item">Social Media Management</span>
-    <span class="ticker-item">Content Calendar Management</span>
-    <span class="ticker-item">Brand Voice Development</span>
-    <span class="ticker-item">Conversion Copywriting</span>
-    <span class="ticker-item">SEO Content Writing</span>
-    <span class="ticker-item">Email Copywriting</span>
-    <span class="ticker-item">Topical Authority</span>
-    <span class="ticker-item">EEAT Optimization</span>
-    <span class="ticker-item">Klaviyo Campaigns</span>
-    <span class="ticker-item">Silo Architecture</span>
-    <span class="ticker-item">Full Funnel Content Strategy</span>
-    <span class="ticker-item">Drip Sequences</span>
-    <span class="ticker-item">Social Media Management</span>
-    <span class="ticker-item">Content Calendar Management</span>
-    <span class="ticker-item">Brand Voice Development</span>
-    <span class="ticker-item">Conversion Copywriting</span>
-  </div>
-</div>
- 
+
 <!-- SERVICES -->
 <section id="services">
-  <div class="inner">
-    <div class="section-hd fu">
-      <div class="section-label">What I Do</div>
-      <h2 class="section-title">Three disciplines.<br><em>One cohesive voice.</em></h2>
-      <p class="section-sub">I don't just write. I build content systems that compound. Every piece maps to a goal, a funnel stage, and a search intent.</p>
+  <div class="section-label">What I Do</div>
+  <h2 class="section-heading">Three disciplines. <em>One cohesive voice.</em></h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">✍️</div>
+      <h3 class="service-title">Content Writing</h3>
+      <p class="service-desc">SEO optimised long-form articles, blog posts, and website copy built on topical authority, silo structure, and EEAT principles. Every piece maps to keyword intent and a stage in the content funnel.</p>
+      <div class="service-tags">
+        <span class="service-tag">SEO Articles</span>
+        <span class="service-tag">Blog Writing</span>
+        <span class="service-tag">Landing Pages</span>
+        <span class="service-tag">Ghostwriting</span>
+        <span class="service-tag">EEAT</span>
+        <span class="service-tag">Semantic SEO</span>
+        <span class="service-tag">Long-Form Content</span>
+        <span class="service-tag">Content Clusters</span>
+      </div>
     </div>
-    <div class="services-grid fu">
- 
-      <div class="svc-card">
-        <div class="svc-icon">✍️</div>
-        <div class="svc-title">SEO Content Writing</div>
-        <p class="svc-desc">Research-backed long-form articles and blog content built on topical authority, silo structure, and EEAT principles. Every piece is optimised for keyword intent, search ranking, and reader engagement.</p>
-        <div class="tag-wrap">
-          <span class="tag">EEAT</span>
-          <span class="tag">Semantic SEO</span>
-          <span class="tag">Topical Authority Mapping</span>
-          <span class="tag">Silo Structure</span>
-          <span class="tag">Internal Linking Strategy</span>
-          <span class="tag">Landing Page Copywriting</span>
-          <span class="tag">Long Form Content</span>
-          <span class="tag">Keyword Research and Mapping</span>
-        </div>
+    <div class="service-card">
+      <div class="service-icon">📧</div>
+      <h3 class="service-title">Email Marketing Copy</h3>
+      <p class="service-desc">High-converting drip campaigns, lead nurture sequences, and newsletter copy written in Klaviyo and Mailchimp. A/B tested subject lines, segmented body copy, and CTA optimisation built into every send.</p>
+      <div class="service-tags">
+        <span class="service-tag">Klaviyo</span>
+        <span class="service-tag">Drip Campaigns</span>
+        <span class="service-tag">Nurture Sequences</span>
+        <span class="service-tag">Subject Line A/B</span>
+        <span class="service-tag">Lead Magnets</span>
+        <span class="service-tag">Newsletters</span>
+        <span class="service-tag">Segmentation Strategy</span>
+        <span class="service-tag">Email Automation</span>
       </div>
- 
-      <div class="svc-card">
-        <div class="svc-icon">📧</div>
-        <div class="svc-title">Email Marketing Copy</div>
-        <p class="svc-desc">High-converting drip campaigns, lead nurture sequences, and newsletters written in Klaviyo and Mailchimp. A/B tested subject lines and CTA optimisation built into every send.</p>
-        <div class="tag-wrap">
-          <span class="tag">Klaviyo</span>
-          <span class="tag">Drip Campaign Writing</span>
-          <span class="tag">Lead Nurture Sequences</span>
-          <span class="tag">Subject Line A/B Testing</span>
-          <span class="tag">Lead Magnet Copy</span>
-          <span class="tag">Email Automation Workflows</span>
-          <span class="tag">List Segmentation</span>
-          <span class="tag">Click Through Rate Optimisation</span>
-        </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📐</div>
+      <h3 class="service-title">Content Strategy</h3>
+      <p class="service-desc">End-to-end strategy including topical maps, silo structures, content calendars, and full-funnel planning. Aligns every content asset to business goals, buyer journey stages, and search intent.</p>
+      <div class="service-tags">
+        <span class="service-tag">Topical Mapping</span>
+        <span class="service-tag">Silo Structure</span>
+        <span class="service-tag">ToFU/MoFU/BoFU</span>
+        <span class="service-tag">Content Calendar</span>
+        <span class="service-tag">Brand Voice</span>
+        <span class="service-tag">Editorial Planning</span>
+        <span class="service-tag">Audience Research</span>
+        <span class="service-tag">Competitor Gap Analysis</span>
       </div>
- 
-      <div class="svc-card">
-        <div class="svc-icon">📱</div>
-        <div class="svc-title">Social Media Management</div>
-        <p class="svc-desc">End-to-end social media strategy including content calendars, platform-native captions, Reels scripts, and community growth across Facebook, Instagram, LinkedIn, and TikTok.</p>
-        <div class="tag-wrap">
-          <span class="tag">Content Calendar Management</span>
-          <span class="tag">Reels Scripting</span>
-          <span class="tag">Brand Voice Development</span>
-          <span class="tag">Community Management</span>
-          <span class="tag">Social Media Strategy</span>
-          <span class="tag">Audience Growth</span>
-          <span class="tag">Platform Performance Analytics</span>
-          <span class="tag">Engagement Rate Optimisation</span>
-        </div>
-      </div>
- 
     </div>
   </div>
 </section>
- 
-<hr class="divider">
- 
+
 <!-- RESULTS -->
 <section id="results">
-  <div class="inner">
-    <div class="results-intro">
-      <div class="fu">
-        <div class="section-label">Client Results</div>
-        <h2 class="section-title">Numbers that<br><em>speak for themselves.</em></h2>
-      </div>
-      <div class="fu" style="padding-top:6px;">
-        <p style="font-size:1rem;color:var(--muted);line-height:1.75;font-weight:300;margin-bottom:22px;">Real results across beauty, SaaS, finance, and insurance. Every number is tied to a real client, a real strategy, and a real timeline.</p>
-        <div style="display:flex;gap:28px;">
-          <div>
-            <div style="font-family:var(--serif);font-size:1.9rem;font-weight:900;color:var(--accent);">6</div>
-            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;">Industries</div>
-          </div>
-          <div>
-            <div style="font-family:var(--serif);font-size:1.9rem;font-weight:900;color:var(--accent);">204</div>
-            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;">Posts in Q1</div>
-          </div>
-          <div>
-            <div style="font-family:var(--serif);font-size:1.9rem;font-weight:900;color:var(--accent);">7</div>
-            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;">Platforms Managed</div>
-          </div>
+  <div class="section-label">Client Results</div>
+  <h2 class="section-heading">Numbers that <em>speak for themselves</em></h2>
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="result-header">Beauty and Skincare</div>
+      <div class="result-body">
+        <div class="result-client">EMME Lash Bar</div>
+        <div class="result-metrics">
+          <div class="metric"><span class="metric-value">+434%</span><span class="metric-label">Total Views</span></div>
+          <div class="metric"><span class="metric-value">+1,150%</span><span class="metric-label">FB Reach</span></div>
+          <div class="metric"><span class="metric-value">866</span><span class="metric-label">Link Clicks</span></div>
         </div>
+        <p class="result-desc">Structured content calendar, POV comedy Reels, and before/after lash videos grew Instagram reach from 33.9K to 122.7K (+261%) in 6 weeks.</p>
       </div>
     </div>
-    <div class="results-grid fu">
-      <div class="res-card">
-        <div class="res-niche">Beauty and Skincare</div>
-        <div class="res-client">EMME Lash Bar</div>
-        <div class="res-metrics">
-          <div class="metric"><span class="met-n">+434%</span><span class="met-l">Total Views</span></div>
-          <div class="metric"><span class="met-n">+1,150%</span><span class="met-l">Facebook Reach</span></div>
-          <div class="metric"><span class="met-n">33K to 123K</span><span class="met-l">Instagram Reach</span></div>
+    <div class="result-card">
+      <div class="result-header">SaaS and Health Tech</div>
+      <div class="result-body">
+        <div class="result-client">HypnoBiz-in-a-Box</div>
+        <div class="result-metrics">
+          <div class="metric"><span class="metric-value">52.7K</span><span class="metric-label">Q1 Impressions</span></div>
+          <div class="metric"><span class="metric-value">+92.3%</span><span class="metric-label">Follower Growth</span></div>
+          <div class="metric"><span class="metric-value">+183%</span><span class="metric-label">IG Impressions</span></div>
         </div>
-        <p class="res-desc">Structured content calendar, POV comedy Reels, and before/after videos drove explosive reach growth in just 6 weeks.</p>
+        <p class="result-desc">Managed 7 platforms: Facebook, Instagram, LinkedIn, TikTok, Pinterest, YouTube, GBP. 204 posts published in Q1 with 695 total engagements.</p>
       </div>
-      <div class="res-card">
-        <div class="res-niche">SaaS and Health Tech</div>
-        <div class="res-client">HypnoBiz in a Box</div>
-        <div class="res-metrics">
-          <div class="metric"><span class="met-n">52.7K</span><span class="met-l">Q1 Impressions</span></div>
-          <div class="metric"><span class="met-n">+92.3%</span><span class="met-l">Follower Growth in March</span></div>
-          <div class="metric"><span class="met-n">+183%</span><span class="met-l">Instagram Impressions</span></div>
+    </div>
+    <div class="result-card">
+      <div class="result-header">Finance and Trading</div>
+      <div class="result-body">
+        <div class="result-client">Playbook Investment Group</div>
+        <div class="result-metrics">
+          <div class="metric"><span class="metric-value">14.5K</span><span class="metric-label">Organic Views</span></div>
+          <div class="metric"><span class="metric-value">+337%</span><span class="metric-label">IG Link Clicks</span></div>
+          <div class="metric"><span class="metric-value">Zero</span><span class="metric-label">Ad Spend</span></div>
         </div>
-        <p class="res-desc">Managed 7 platforms: Facebook, Instagram, LinkedIn, TikTok, Pinterest, YouTube, GBP. 204 posts and 695 total engagements in Q1.</p>
+        <p class="result-desc">Daily Reels strategy, stock ticker breakdowns, and timely market-reaction content. 552 content interactions, 65 new organic followers.</p>
       </div>
-      <div class="res-card">
-        <div class="res-niche">Finance and Trading</div>
-        <div class="res-client">Playbook Investment Group</div>
-        <div class="res-metrics">
-          <div class="metric"><span class="met-n">14.5K</span><span class="met-l">Organic Views</span></div>
-          <div class="metric"><span class="met-n">+337%</span><span class="met-l">Instagram Link Clicks</span></div>
-          <div class="metric"><span class="met-n">$0</span><span class="met-l">Ad Spend</span></div>
+    </div>
+    <div class="result-card">
+      <div class="result-header">Financial Services</div>
+      <div class="result-body">
+        <div class="result-client">MonRoe Life Insurance</div>
+        <div class="result-metrics">
+          <div class="metric"><span class="metric-value">+421%</span><span class="metric-label">Facebook Views</span></div>
+          <div class="metric"><span class="metric-value">+100%</span><span class="metric-label">Link Clicks</span></div>
+          <div class="metric"><span class="metric-value">0→Live</span><span class="metric-label">LinkedIn Launch</span></div>
         </div>
-        <p class="res-desc">Daily Reels strategy, stock ticker breakdowns, and market reaction content. 552 interactions, 65 new organic followers with zero paid spend.</p>
+        <p class="result-desc">Launched LinkedIn from zero, converted Instagram to Business account, introduced consistent brand voice and webinar-led authority content.</p>
       </div>
-      <div class="res-card">
-        <div class="res-niche">Financial Services</div>
-        <div class="res-client">MonRoe Life Insurance</div>
-        <div class="res-metrics">
-          <div class="metric"><span class="met-n">+421%</span><span class="met-l">Facebook Views</span></div>
-          <div class="metric"><span class="met-n">+100%</span><span class="met-l">Link Clicks</span></div>
-          <div class="metric"><span class="met-n">Zero to Live</span><span class="met-l">LinkedIn Presence</span></div>
+    </div>
+    <div class="result-card">
+      <div class="result-header">SEO and Content Writing</div>
+      <div class="result-body">
+        <div class="result-client">Multi-Niche SEO Content</div>
+        <div class="result-metrics">
+          <div class="metric"><span class="metric-value">+60%</span><span class="metric-label">Organic Traffic</span></div>
+          <div class="metric"><span class="metric-value">+30%</span><span class="metric-label">Lead Generation</span></div>
+          <div class="metric"><span class="metric-value">Multi</span><span class="metric-label">Verticals</span></div>
         </div>
-        <p class="res-desc">Launched LinkedIn from scratch, converted Instagram to Business, introduced webinar-led authority content and consistent brand voice.</p>
+        <p class="result-desc">Long-form keyword-intent articles, semantic content clusters, silo structures, and EEAT-aligned copy across finance, health, real estate, and tech verticals.</p>
       </div>
-      <div class="res-card">
-        <div class="res-niche">SEO and Content Writing</div>
-        <div class="res-client">Multi Niche SEO Writing</div>
-        <div class="res-metrics">
-          <div class="metric"><span class="met-n">+60%</span><span class="met-l">Organic Traffic</span></div>
-          <div class="metric"><span class="met-n">+30%</span><span class="met-l">Lead Generation</span></div>
+    </div>
+    <div class="result-card">
+      <div class="result-header">Email Marketing</div>
+      <div class="result-body">
+        <div class="result-client">Email Copy Across 8+ Brands</div>
+        <div class="result-metrics">
+          <div class="metric"><span class="metric-value">+30%</span><span class="metric-label">Engagement Lift</span></div>
+          <div class="metric"><span class="metric-value">8+</span><span class="metric-label">Client Brands</span></div>
+          <div class="metric"><span class="metric-value">A/B</span><span class="metric-label">Always Tested</span></div>
         </div>
-        <p class="res-desc">Long form keyword intent articles, semantic clusters, silo structures, and EEAT copy across finance, health, real estate, and tech verticals.</p>
-      </div>
-      <div class="res-card">
-        <div class="res-niche">Email Marketing</div>
-        <div class="res-client">8 Plus Brand Portfolio</div>
-        <div class="res-metrics">
-          <div class="metric"><span class="met-n">+30%</span><span class="met-l">Email Engagement Lift</span></div>
-          <div class="metric"><span class="met-n">8+</span><span class="met-l">Active Client Brands</span></div>
-        </div>
-        <p class="res-desc">A/B tested subject lines and segmented Klaviyo and Mailchimp nurture sequences for GoFundYourself.show, WiseLifeCo.com, GlowBuddy.co and more.</p>
+        <p class="result-desc">A/B tested subject lines, segmented Klaviyo and Mailchimp nurture sequences, and conversion-focused drip copy for GoFundYourself.show, WiseLifeCo.com, GlowBuddy.co and more.</p>
       </div>
     </div>
   </div>
 </section>
- 
-<hr class="divider">
- 
-<!-- EMAIL -->
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="section-label">Content Writing Expertise</div>
+  <h2 class="section-heading">Every word mapped <em>to a purpose</em></h2>
+  <div class="expertise-grid">
+    <div class="expertise-card">
+      <div class="exp-number">01</div>
+      <h3 class="exp-title">SEO Long-Form Content</h3>
+      <p class="exp-desc">Research-backed articles built around topical authority and keyword intent. I create silo structures and topical maps that signal EEAT to search engines and keep readers on-page longer.</p>
+      <div class="exp-tags">
+        <span class="exp-tag">EEAT</span>
+        <span class="exp-tag">Semantic SEO</span>
+        <span class="exp-tag">Topical Mapping</span>
+        <span class="exp-tag">Silo Structure</span>
+        <span class="exp-tag">Internal Linking</span>
+      </div>
+    </div>
+    <div class="expertise-card">
+      <div class="exp-number">02</div>
+      <h3 class="exp-title">Full-Funnel Blog Strategy</h3>
+      <p class="exp-desc">Top-of-funnel awareness blogs, middle-of-funnel comparison guides, and bottom-of-funnel conversion pieces all mapped to the buyer journey and optimised for the right search intent at each stage.</p>
+      <div class="exp-tags">
+        <span class="exp-tag">ToFU</span>
+        <span class="exp-tag">MoFU</span>
+        <span class="exp-tag">BoFU</span>
+        <span class="exp-tag">Buyer Journey</span>
+        <span class="exp-tag">Keyword Intent</span>
+      </div>
+    </div>
+    <div class="expertise-card">
+      <div class="exp-number">03</div>
+      <h3 class="exp-title">Website and Landing Page Copy</h3>
+      <p class="exp-desc">Conversion-focused web copy for homepages, service pages, and high-intent landing pages. Written with UX principles, clear CTAs, and brand voice consistency across every touchpoint.</p>
+      <div class="exp-tags">
+        <span class="exp-tag">Conversion Copy</span>
+        <span class="exp-tag">CTA Writing</span>
+        <span class="exp-tag">UX Writing</span>
+        <span class="exp-tag">Brand Voice</span>
+      </div>
+    </div>
+    <div class="expertise-card">
+      <div class="exp-number">04</div>
+      <h3 class="exp-title">Social Content and Reels Copy</h3>
+      <p class="exp-desc">Platform-native captions, Reels scripts, and short-form video hooks crafted for algorithm performance and genuine audience connection across Facebook, Instagram, LinkedIn, and TikTok.</p>
+      <div class="exp-tags">
+        <span class="exp-tag">Reels Scripts</span>
+        <span class="exp-tag">Short-Form Copy</span>
+        <span class="exp-tag">Caption Writing</span>
+        <span class="exp-tag">Video Hooks</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL SECTION -->
 <section id="email">
-  <div class="inner">
-    <div class="email-layout">
-      <div class="fu">
-        <div class="section-label">Email Marketing</div>
-        <h2 class="section-title" style="color:var(--white);">Emails that get<br><em>opened and clicked.</em></h2>
-        <p class="section-sub">I write drip campaigns, lead nurture sequences, and newsletters that move subscribers from first hello to loyal customer.</p>
-        <ul class="email-flist">
-          <li class="email-feat">
-            <div class="email-feat-icon">🎯</div>
-            <div>
-              <h4>Segmented by intent</h4>
-              <p>Every send is personalised to a segment. Cold leads get different copy than warm subscribers.</p>
-            </div>
-          </li>
-          <li class="email-feat">
-            <div class="email-feat-icon">🧪</div>
-            <div>
-              <h4>A/B tested by default</h4>
-              <p>Subject lines, preview text, and CTAs are always tested, not guessed.</p>
-            </div>
-          </li>
-          <li class="email-feat">
-            <div class="email-feat-icon">⚙️</div>
-            <div>
-              <h4>Built in Klaviyo and Mailchimp</h4>
-              <p>I write, configure, and deliver inside the platform. No handoff needed.</p>
-            </div>
-          </li>
-        </ul>
+  <div class="email-inner">
+    <div>
+      <div class="section-label">Email Marketing</div>
+      <h2 class="section-heading">Emails that get opened <em>and clicked</em></h2>
+      <p class="email-text">I write <strong>drip campaigns, lead nurture sequences, and newsletters</strong> that move subscribers through the funnel from first hello to loyal customer. Every email is A/B tested for subject lines, personalised for the segment, and written with a clear conversion goal.</p>
+      <p class="email-text">Delivered a <strong>30% lift in email engagement</strong> across 8+ brands through optimised copy, segmentation, and CTA testing in Klaviyo and Mailchimp.</p>
+      <div class="email-stats">
+        <div class="email-stat">
+          <div class="email-stat-val">30%</div>
+          <div class="email-stat-lbl">Engagement Lift</div>
+        </div>
+        <div class="email-stat">
+          <div class="email-stat-val">8+</div>
+          <div class="email-stat-lbl">Brands</div>
+        </div>
+        <div class="email-stat">
+          <div class="email-stat-val">A/B</div>
+          <div class="email-stat-lbl">Always Tested</div>
+        </div>
       </div>
-      <div class="fu">
-        <div class="email-mock">
-          <div class="mock-bar">
-            <div class="dot dr"></div>
-            <div class="dot dy"></div>
-            <div class="dot dg"></div>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.3);margin-left:8px;">Klaviyo Campaign Builder</span>
-          </div>
-          <div class="mock-body">
-            <div class="ms-line"></div>
-            <div class="ml" style="width:90%;"></div>
-            <div class="ml" style="width:100%;"></div>
-            <div class="ml" style="width:76%;"></div>
-            <div class="ml" style="width:88%;height:8px;"></div>
-            <div class="ml" style="width:60%;height:8px;"></div>
-            <div class="mock-btn">View Your Results →</div>
-            <div class="mock-stats">
-              <div class="ms-box"><div class="n">30%</div><div class="l">Engagement Lift</div></div>
-              <div class="ms-box"><div class="n">8+</div><div class="l">Brands</div></div>
-              <div class="ms-box"><div class="n">A/B</div><div class="l">Always Tested</div></div>
-            </div>
-          </div>
+      <p class="tools-line" style="margin-top:1.5rem">Tools: <strong>Klaviyo · Mailchimp · GoHighLevel · Apollo</strong></p>
+<!-- TECH STACK -->
+<section id="techstack">
+  <div class="section-label">Tech Stack</div>
+  <div class="stack-layout">
+    <div>
+      <h2 class="stack-intro-heading">Tools that <em>deliver results.</em></h2>
+      <p class="stack-intro-sub">I don't just list tools — I use them to build real systems and workflows.</p>
+    </div>
+    <div class="stack-categories">
+      <div class="stack-cat">
+        <div class="stack-cat-label">Email and CRM</div>
+        <div class="stack-tags">
+          <span class="stack-tag">Klaviyo</span>
+          <span class="stack-tag">Mailchimp</span>
+          <span class="stack-tag">GoHighLevel</span>
+          <span class="stack-tag">Apollo</span>
+          <span class="stack-tag">ActiveCampaign</span>
+          <span class="stack-tag">HubSpot</span>
+        </div>
+      </div>
+      <div class="stack-cat">
+        <div class="stack-cat-label">SEO and Analytics</div>
+        <div class="stack-tags">
+          <span class="stack-tag">Ahrefs</span>
+          <span class="stack-tag">Surfer SEO</span>
+          <span class="stack-tag">SEMrush</span>
+          <span class="stack-tag">GA4</span>
+          <span class="stack-tag">Google Search Console</span>
+          <span class="stack-tag">Frase.io</span>
+          <span class="stack-tag">Screaming Frog</span>
+          <span class="stack-tag">Ubersuggest</span>
+        </div>
+      </div>
+      <div class="stack-cat">
+        <div class="stack-cat-label">Content and Social</div>
+        <div class="stack-tags">
+          <span class="stack-tag">Meta Business Suite</span>
+          <span class="stack-tag">Hootsuite</span>
+          <span class="stack-tag">WordPress</span>
+          <span class="stack-tag">Canva</span>
+          <span class="stack-tag">CapCut</span>
+          <span class="stack-tag">ContentStudio</span>
+          <span class="stack-tag">Marky</span>
+          <span class="stack-tag">Planthat</span>
+        </div>
+      </div>
+      <div class="stack-cat">
+        <div class="stack-cat-label">AI and Productivity</div>
+        <div class="stack-tags">
+          <span class="stack-tag">Claude Code</span>
+          <span class="stack-tag">Perplexity</span>
+          <span class="stack-tag">Notion</span>
+          <span class="stack-tag">Trello</span>
+          <span class="stack-tag">ClickUp</span>
+          <span class="stack-tag">Slack</span>
+          <span class="stack-tag">Asana</span>
+          <span class="stack-tag">Kanban</span>
         </div>
       </div>
     </div>
   </div>
 </section>
- 
-<!-- TOOLS -->
-<section id="tools">
-  <div class="inner">
-    <div class="tools-layout">
-      <div class="fu" style="position:sticky;top:100px;">
-        <div class="section-label">Tech Stack</div>
-        <h2 class="section-title">Tools that<br><em>deliver results.</em></h2>
-        <p class="section-sub" style="margin-top:12px;">I don't just list tools. I use them to build real systems, workflows, and measurable outcomes for every client.</p>
-      </div>
-      <div class="tool-cats fu">
- 
-        <div class="tool-cat">
-          <h4>Email and CRM</h4>
-          <div class="chips">
-            <span class="chip">Klaviyo</span>
-            <span class="chip">Mailchimp</span>
-            <span class="chip">GoHighLevel</span>
-            <span class="chip">Apollo</span>
-            <span class="chip">ActiveCampaign</span>
-            <span class="chip">ConvertKit</span>
-          </div>
-        </div>
- 
-        <div class="tool-cat">
-          <h4>SEO and Analytics</h4>
-          <div class="chips">
-            <span class="chip">Ahrefs</span>
-            <span class="chip">Surfer SEO</span>
-            <span class="chip">SEMrush</span>
-            <span class="chip">Google Analytics 4</span>
-            <span class="chip">Google Search Console</span>
-            <span class="chip">Frase.io</span>
-            <span class="chip">Clearscope</span>
-            <span class="chip">Moz</span>
-          </div>
-        </div>
- 
-        <div class="tool-cat">
-          <h4>Content and Social Media</h4>
-          <div class="chips">
-            <span class="chip">Meta Business Suite</span>
-            <span class="chip">Hootsuite</span>
-            <span class="chip">Sprout Social</span>
-            <span class="chip">Publer</span>
-            <span class="chip">WordPress</span>
-            <span class="chip">Canva</span>
-            <span class="chip">CapCut</span>
-            <span class="chip">Adobe Express</span>
-          </div>
-        </div>
- 
-        <div class="tool-cat">
-          <h4>AI and Productivity</h4>
-          <div class="chips">
-            <span class="chip">ChatGPT</span>
-            <span class="chip">Jasper AI</span>
-            <span class="chip">Copy.ai</span>
-            <span class="chip">Notion</span>
-            <span class="chip">ClickUp</span>
-            <span class="chip">Trello</span>
-            <span class="chip">Slack</span>
-            <span class="chip">Asana</span>
-          </div>
-        </div>
- 
-      </div>
-    </div>
-  </div>
-</section>
- 
-<hr class="divider">
- 
+
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="inner">
-    <div class="exp-layout">
-      <div class="fu" style="position:sticky;top:100px;">
-        <div class="section-label">Experience</div>
-        <h2 class="section-title">7 years of<br><em>words that work.</em></h2>
-        <p class="section-sub" style="margin-top:12px;">From solo writer to leading a 12-person content team. Every role has sharpened the craft.</p>
-      </div>
-      <div class="timeline fu">
-        <div class="exp-item">
-          <div class="exp-dot"></div>
-          <div class="exp-date">Jan 2026 to Present</div>
-          <div class="exp-role">Content Strategist and Strategy Manager</div>
-          <div class="exp-co">Carpe Diem Team · Remote</div>
-          <ul class="exp-ul">
-            <li>Oversee content writing, email copy, and social media management for <span class="hl">15+ simultaneous client accounts</span> across finance, tech, skincare, health, and real estate</li>
-            <li>Build topical authority maps and silo structures grounded in EEAT and semantic SEO, lifting client organic rankings and domain authority</li>
-            <li>Achieved <span class="hl">+434% total views</span> for a skincare brand and <span class="hl">+421% Facebook views</span> for an insurance client with zero paid ad spend</li>
-            <li>Directed a <span class="hl">12-member content team</span>, cutting turnaround time 40% while sustaining 90%+ client retention</li>
-          </ul>
-        </div>
-        <div class="exp-item">
-          <div class="exp-dot"></div>
-          <div class="exp-date">Nov 2024 to May 2025</div>
-          <div class="exp-role">SEO Content Writer and Email Copywriter</div>
-          <div class="exp-co">Carpe Diem Team · Remote</div>
-          <ul class="exp-ul">
-            <li>Drove <span class="hl">60% organic traffic growth</span> through long form SEO articles built on keyword intent, semantic relevance, internal linking, and EEAT signals</li>
-            <li>Grew inbound lead generation <span class="hl">30%</span> via conversion focused landing page copy and BoFU call-to-action sequences</li>
-            <li>Raised email open rates and click through rates <span class="hl">30%</span> through A/B tested subject lines and segmented Klaviyo and Mailchimp sequences across 8+ brands</li>
-            <li>Produced brand voice guidelines and content style documentation for 5+ clients ensuring copy consistency across web, email, and social</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<hr class="divider">
- 
-<!-- CTA -->
-<section id="contact">
-  <div class="inner">
-    <div class="cta-box fu">
+  <div class="section-label">Experience</div>
+  <h2 class="section-heading">7 years of words <em>that work</em></h2>
+  <div class="exp-timeline">
+    <div class="exp-item">
       <div>
-        <div class="section-label">Available Now</div>
-        <div class="cta-title">Let's create content<br>that <em>actually converts.</em></div>
-        <p class="cta-sub">Whether you need SEO articles, a Klaviyo email sequence, or a full content strategy, I am ready to build something that moves the needle.</p>
-        <div class="cta-loc">📍 Karachi, Pakistan · Open to remote roles worldwide</div>
+        <div class="exp-period">Jan 2026 – Present</div>
+        <div class="exp-company">Carpe Diem Team · Remote</div>
       </div>
-      <div class="cta-btns">
-        <a href="mailto:syedaerajn@gmail.com" class="btn-p" style="justify-content:center;">📩 Email Me</a>
-        <a href="https://linkedin.com/in/eraj-nadeem" target="_blank" class="btn-s" style="justify-content:center;">Connect on LinkedIn</a>
-        <a href="tel:+923193373350" class="btn-s" style="justify-content:center;">📞 +92 319 337 3350</a>
+      <div class="exp-right">
+        <div class="exp-role">Content Strategist · Strategy Manager</div>
+        <ul class="exp-bullets">
+          <li>Oversee content writing, email copy, and social media strategy for 15+ simultaneous client accounts across finance, tech, skincare, health, and real estate</li>
+          <li>Build topical authority maps and silo structures grounded in EEAT and semantic SEO, lifting client organic rankings and domain authority</li>
+          <li>Develop full-funnel editorial calendars mapping ToFU awareness blogs, MoFU comparison guides, and BoFU conversion copy to each client's buyer journey</li>
+          <li>Managed social media content across Facebook, Instagram, LinkedIn, TikTok, Pinterest, YouTube, and GBP; wrote all captions, Reels scripts, and ad copy achieving +434% total views for a skincare brand and +421% Facebook views for an insurance client</li>
+          <li>Built multiple social brand presences from zero for clients across finance, skincare, and health; generated 14,521 organic views with zero ad spend</li>
+          <li>Direct a 12-member content team, cutting turnaround 40% while sustaining 90%+ client retention</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div>
+        <div class="exp-period">Nov 2024 – May 2025</div>
+        <div class="exp-company">Carpe Diem Team · Remote</div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">SEO Content Writer · Email Copywriter</div>
+        <ul class="exp-bullets">
+          <li>Drove 60% organic traffic growth through long-form SEO articles optimised for keyword intent, semantic relevance, internal linking, and EEAT signals</li>
+          <li>Grew inbound lead generation 30% via conversion-focused landing page copy, product-led blog content, and BoFU call-to-action sequences</li>
+          <li>Raised email open rates and click-through rates 30% through A/B tested subject lines, personalised drip copy, and segmented Klaviyo and Mailchimp nurture sequences across 8+ client brands</li>
+          <li>Produced brand voice guidelines and content style docs for 5+ clients ensuring copy consistency across web, email, and social</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
- 
+
+<!-- CTA -->
+<section id="cta">
+  <div class="section-label">Available for Work</div>
+  <h2 class="section-heading">Let's create content that <em>actually converts</em></h2>
+  <p class="cta-desc">Open to content writing, email marketing, social media, and copywriting roles. Remote worldwide.</p>
+  <div class="cta-btns">
+    <a href="tel:+923193373350" class="btn-primary">Call +92 319 337 3350</a>
+    <a href="https://linkedin.com/in/eraj-nadeem" class="btn-ghost" target="_blank">Connect on LinkedIn</a>
+  </div>
+  <p class="cta-contact"><a href="mailto:syedaerajn@gmail.com">syedaerajn@gmail.com</a> &nbsp;·&nbsp; Karachi, Pakistan &nbsp;·&nbsp; Open to remote roles worldwide</p>
+</section>
+
 <!-- FOOTER -->
 <footer>
-  <div class="foot-inner">
-    <div class="foot-name">Syeda Eraj Nadeem</div>
-    <div class="foot-links">
-      <a href="mailto:syedaerajn@gmail.com">syedaerajn@gmail.com</a>
-      <a href="https://linkedin.com/in/eraj-nadeem" target="_blank">LinkedIn</a>
-      <a href="tel:+923193373350">+92 319 337 3350</a>
-    </div>
-    <div class="foot-c">© 2026</div>
+  <span class="footer-name">Syeda Eraj Nadeem</span>
+  <div class="footer-links">
+    <a href="tel:+923193373350">+92 319 337 3350</a>
+    <a href="https://linkedin.com/in/eraj-nadeem" target="_blank">LinkedIn</a>
+    <a href="mailto:syedaerajn@gmail.com">Email Me</a>
   </div>
+  <span class="footer-copy">© 2026</span>
 </footer>
- 
-<script>
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fu').forEach(el => obs.observe(el));
-</script>
+
 </body>
 </html>
